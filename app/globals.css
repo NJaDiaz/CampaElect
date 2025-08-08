@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.event-date {
+  background-color: #FF6B00 !important; /* Color de fondo (verde) */
+  color: white; /* Color de texto blanco */
+  font-weight: bold !important;
+  border-radius: 50%;
+}
+
+.event-date:hover {
+  background-color: #d8691a !important; /* Cambio de color al pasar el mouse */
+}
+
+.react-calendar__tile--weekend {
+  color: inherit !important;
+}
+
+.react-calendar__month-view__days__day--weekend{
+  color: inherit !important;
+
+}
