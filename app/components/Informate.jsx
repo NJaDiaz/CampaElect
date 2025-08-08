@@ -14,7 +14,7 @@ const novedades = [
   {
     titulo: "Nota al consejo deliberante",
     descripcion: "Daniel Orlando presento una nota al consejo deliberante esperando pronta respuesta.",
-    fecha: "Julio 2025",
+    fecha: "05 Agosto 2025",
     imagen: "/informate/nota.webp",
     detalle: "Daniel Orlando presentó un pedido de informe al Consejo Deliberante en busca de claridad y respuesta para el pueblo, ya que se acerca la fecha de elecciones y no hay certeza alguna de que esto suceda.",
     tipo: "modal", 
