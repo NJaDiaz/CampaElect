@@ -1,75 +1,88 @@
 "use client";
-
-import { useRouter } from "next/router";
+import * as React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const noticias = {
   "pedido-informe": {
     titulo: "El presidente dijo NO al pedido de informe elevado por Daniel Orlando",
-    fecha: "06 Agosto 2025",
+    fecha: "06 Agosto del 2025",
     contenido: `El presidente del Honorable Consejo Deliberante no puso a consideración el pedido de informe solicitado por Daniel Orlando al actual intendente de Potrero de Los funes.
-    La localidad continua sin una fecha electoral, sin detalles de organización, costos ni origen de fondos, esto refleja una falta de respuesta hacia la democracia que tenemos en nuestro Pais.
-    A continuación dejamos un fragmento de Radio Dimensión en donde participo el candidato Daniel Orlando`,
-    imagenes: [
-      "/informate/hcd.webp",
-    ],
-        embed: "https://embed.screenapp.io/app/#/shared/bIMwsfJ47b?embed=true",
+La localidad continua sin una fecha electoral, sin detalles de organización, costos ni origen de fondos, esto refleja una falta de respuesta hacia la democracia que tenemos en nuestro Pais.
+A continuación dejamos un fragmento de Radio Dimensión en donde participo el candidato Daniel Orlando`,
+    imagenes: ["/informate/hcd.webp"],
+    embed: "https://embed.screenapp.io/app/#/shared/bIMwsfJ47b?embed=true",
   },
 };
 
 export default function NoticiaDetalle({ params }) {
-  const slug = params.slug;
+  // ✅ Usar React.use() para desempaquetar params
+  const actualParams = React.use(params);
+  const { slug } = actualParams;
+
   const noticia = noticias[slug];
 
-  if (!noticia) return <p className="text-center py-20">Cargando noticia...</p>;
+  if (!noticia)
+    return <p className="text-center py-20 text-gray-500">Cargando noticia...</p>;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12 space-y-8 bg-white">
-      <h1 className="text-4xl font-bold text-orange-600">{noticia.titulo}</h1>
-      <p className="text-gray-500">{noticia.fecha}</p>
+    <main className="max-w-5xl pt-32 mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl md:text-5xl font-extrabold text-orange-500 text-center md:text-left relative"
+      >
+        {noticia.titulo}
+  <div className="w-40 h-1 mx-auto my-10 bg-[#ff6e1c] rounded"></div>
+      </motion.h1>
 
-      <div className="space-y-6">
+      <p className="text-gray-500 text-center md:text-left">{noticia.fecha}</p>
+
+      <div className="space-y-8">
         {noticia.imagenes.map((img, i) => (
-          <Image
+          <motion.div
             key={i}
-            src={img}
-            alt={`Imagen ${i + 1}`}
-            width={800}
-            height={500}
-            className="rounded-lg w-full object-cover"
-          />
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="overflow-hidden rounded-lg"
+          >
+            <Image
+              src={img}
+              alt={`Imagen ${i + 1}`}
+              width={800}
+              height={500}
+              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </motion.div>
         ))}
-        <p className="text-lg text-gray-700 leading-relaxed">{noticia.contenido}</p>
-        
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-gray-700 text-lg leading-relaxed"
+        >
+          {noticia.contenido}
+        </motion.p>
+
         {noticia.embed && (
-  <div className="w-full h-[960px] rounded-lg overflow-hidden">
-    <iframe
-      src={noticia.embed}
-      width="100%"
-      height="980"
-      frameBorder="0"
-      allowFullScreen
-      className="w-full h-full"
-    />
-  </div>
-)}
-
-        
-        
-        {noticia.video && (
-  <video controls className="w-full rounded-lg">
-    <source src={noticia.video} type="video/mp4" />
-    Tu navegador no soporta el video.
-  </video>
-)}
-
-{noticia.audio && (
-  <audio controls className="w-full mt-4">
-    <source src={noticia.audio} type="audio/mpeg" />
-    Tu navegador no soporta el audio.
-  </audio>
-)}
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="w-full aspect-video rounded-lg overflow-hidden"
+          >
+            <iframe
+              src={noticia.embed}
+              title="Video Embed"
+              className="w-full h-full"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </motion.div>
+        )}
       </div>
     </main>
   );

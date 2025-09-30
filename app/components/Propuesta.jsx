@@ -2,7 +2,7 @@ import React from "react";
 
 const PropuestaSection = () => {
   return (
-    <section className="bg-white py-16 px-6">
+    <section id="propuesta" className="bg-white py-16 px-6">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
 
         <div className="w-full md:w-1/2 lg:w-1/2 text-center lg:text-left">

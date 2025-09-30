@@ -5,7 +5,8 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-b from-[#FFB347] to-[#FF6B00] text-white pb-12">
+    <main className="pt-24 bg-[#ff6e1c] w-full mx-auto">
+    <section className="relative bg-gradient-to-b from-[#ff6e1c] via-[#ff8e4c] to-[#f7924b] text-white pb-12">
       <div className="container mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center md:justify-between">
         
         <div className="flex flex-col items-center md:items-center md:w-1/2">
@@ -68,6 +69,7 @@ const Hero = () => {
 
       </div>
     </section>
+     </main>
   );
 };
 

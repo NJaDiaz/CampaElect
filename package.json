@@ -15,6 +15,7 @@
     "@mui/joy": "^5.0.0-beta.51",
     "@tinymce/tinymce-react": "^5.1.1",
     "firebase": "^11.2.0",
+    "framer-motion": "^12.23.22",
     "next": "15.1.6",
     "react": "^18.3.1",
     "react-calendar": "^5.1.0",

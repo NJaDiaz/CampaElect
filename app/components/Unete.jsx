@@ -29,7 +29,7 @@ export default function Unete() {
   };
 
   return (
-    <section className="bg-orange-400 py-12 px-4">
+    <section className="bg-[#ff6e1c] py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-white mb-6">
           Unite a la Campaña

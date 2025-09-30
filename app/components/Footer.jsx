@@ -47,12 +47,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* ENLACES */}
           <div className="text-center">
             <p className="font-semibold text-lg">Enlaces Rápidos</p>
             <ul className="mt-4 font-thin space-y-2">
               <li>
-                <a href="/nuestras-propuestas" className="text-orange-500 hover:text-yellow-500 transition duration-300">
+                <a href="/#propuesta" className="text-orange-500 hover:text-yellow-500 transition duration-300">
                   Nuestras Propuestas
                 </a>
               </li>
@@ -62,7 +61,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/contacto" className="text-orange-500 hover:text-yellow-500 transition duration-300">
+                <a href="/unete" className="text-orange-500 hover:text-yellow-500 transition duration-300">
                   Contacto
                 </a>
               </li>
