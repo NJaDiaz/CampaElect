@@ -2,7 +2,8 @@
 
 export default function PoliticaCookies() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800 dark:text-gray-200">
+        <main className="pt-24 bg-[#ff6e1c] w-full mx-auto">
+    <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800">
       <h1 className="text-3xl font-bold mb-6">Política de Cookies</h1>
 
       <p className="mb-4">
@@ -65,8 +66,9 @@ export default function PoliticaCookies() {
       <h2 className="text-2xl font-semibold mt-6 mb-2">Contacto</h2>
       <p>
         Si tenés preguntas sobre nuestra política de cookies, podés contactarnos
-        al correo electrónico: <a href="mailto:info@tusitio.com" className="underline text-blue-500">info@tusitio.com</a>
+        al correo electrónico: <a href="mailto:nesjavi.diaz@gmail.com" className="underline text-blue-500">nesjavi.diaz@gmail.com</a>
       </p>
     </div>
+    </main>
   );
 }
