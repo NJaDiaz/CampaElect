@@ -34,7 +34,7 @@ const ConocenosSection = () => {
         <div className="my-16">
           <div className="text-center">
             <img
-              src="/images/perfil.webp"
+              src="/images/PerfilDaniel.webp"
               alt="Daniel Orlando"
               className="w-28 h-28 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
@@ -48,7 +48,7 @@ const ConocenosSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
           <div className="text-center">
             <img
-              src="/equipo/concejal1.jpeg"
+              src="/equipo/Concejal.jpeg"
               alt="Marcelo de la Reta"
               className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
