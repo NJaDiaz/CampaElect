@@ -8,7 +8,7 @@ const BancoDeImagenes = () => {
         <main className="pt-24 bg-[#ff6e1c] w-full mx-auto">
   <section className="py-12 px-4 bg-[#ff6e1c]"> 
   <h2 className="md:text-2xl text-xl font-bold text-center mb-5 text-gray-200"> Te mostramos algunas imágenes de nuestras diferentes gestiones </h2> 
-  <p className="md:text-lg text-md font-thin text-center mb-10 text-gray-200 max-w-3xl mx-auto"> Momentos que quedaron captados por las cámaras, de lo que fue nuestro acompañamiento en todos los años que hemos formado parte del mandato de Potrero de los Funes </p> 
+  <p className="md:text-lg text-md font-bold text-center mb-10 text-gray-200 max-w-3xl mx-auto"> Momentos que quedaron captados por las cámaras, de lo que fue nuestro acompañamiento en todos los años que hemos formado parte del mandato de Potrero de los Funes </p> 
   <div className="w-40 h-1 mx-auto mb-10 bg-gradient-to-r from-transparent via-white to-transparent rounded"></div>
 
   <div className="columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4"> 
