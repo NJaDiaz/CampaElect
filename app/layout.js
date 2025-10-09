@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Potrero Activo 2025",
-  description: "Potrero Activo 2025 - Potrero de los Funes, San Luis, Argentina",
+  title: {
+    default: 'Potrero Activo | Daniel Orlando 2025',
+    template: '%s | Potrero Activo',
+  },
+  description: 'Conocé el equipo, las propuestas y el plan de trabajo de Potrero Activo, la lista encabezada por Daniel Orlando para el futuro de Potrero de los Funes, San Luis.',
+  keywords: ['Potrero Activo', 'Daniel Orlando', 'Potrero de los Funes', 'elecciones Potrero', 'San Luis'],
 };
 
 export default function RootLayout({ children }) {

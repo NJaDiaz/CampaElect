@@ -1,10 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 const ConocenosSection = () => {
   return (
-    <section className="bg-[#F9F9F9] py-16 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Título */}
+    <motion.section
+      className="bg-[#F9F9F9] py-16 px-6"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: false }}
+    >
+      <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-10 max-w-3xl mx-auto">
           Trabajo, esfuerzo y dedicación para construir juntos un futuro mejor
         </h2>
@@ -24,57 +31,95 @@ const ConocenosSection = () => {
           </a>
         </div>
 
-        {/* <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="my-16">
           <div className="text-center">
             <img
-              src="/images/Dani.jpg"
+              src="/images/perfil.webp"
               alt="Daniel Orlando"
-              className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+              className="w-28 h-28 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
-            <p className="mt-4 text-lg font-semibold text-gray-800">
+            <p className="mt-4 text-xl font-semibold text-gray-800">
               Daniel Orlando
             </p>
             <p className="text-sm text-gray-600">Candidato a Intendente</p>
           </div>
+        </div>
 
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
           <div className="text-center">
             <img
-              src="/images/Daniel.jpg"
-              alt="María González"
+              src="/equipo/concejal1.jpeg"
+              alt="Marcelo de la Reta"
               className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
             <p className="mt-4 text-lg font-semibold text-gray-800">
-              María González
+              Marcelo de la Reta
             </p>
-            <p className="text-sm text-gray-600">Directora</p>
+            <p className="text-sm text-gray-600">Concejal Titular 1er término</p>
           </div>
 
           <div className="text-center">
             <img
-              src="/images/Daniel.jpg"
-              alt="Pedro López"
+              src="/equipo/Concejal2.jpeg"
+              alt="Navila Bustos"
               className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
             <p className="mt-4 text-lg font-semibold text-gray-800">
-              Pedro López
+              Navila Bustos
             </p>
-            <p className="text-sm text-gray-600">Técnico</p>
+            <p className="text-sm text-gray-600">Concejal Titular 2do término</p>
           </div>
 
           <div className="text-center">
             <img
-              src="/images/Daniel.jpg"
-              alt="Laura Martínez"
+              src="/equipo/Concejal3.jpeg"
+              alt="Carlos Lucero"
               className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />
             <p className="mt-4 text-lg font-semibold text-gray-800">
-              Laura Martínez
+              Carlos Lucero
             </p>
-            <p className="text-sm text-gray-600">Asesora</p>
+            <p className="text-sm text-gray-600">Concejal Titular 3er término</p>
           </div>
-        </div> */}
+
+          <div className="text-center">
+            <img
+              src="/equipo/Concejal_S1.jpeg"
+              alt="Emilce Miranda"
+              className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-800">
+              Emilce Miranda
+            </p>
+            <p className="text-sm text-gray-600">Concejal 1er Suplente</p>
+          </div>
+
+          <div className="text-center">
+            <img
+              src="/equipo/Concejal_S2.jpeg"
+              alt="Gustavo Amaya"
+              className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-800">
+              Gustavo Amaya
+            </p>
+            <p className="text-sm text-gray-600">Concejal 2do Suplente</p>
+          </div>
+
+          <div className="text-center">
+            <img
+              src="/equipo/Concejal_S3.jpeg"
+              alt="Mariana Cadelago"
+              className="w-24 h-24 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-800">
+              Mariana Cadelago
+            </p>
+            <p className="text-sm text-gray-600">Concejal 3er Suplente</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

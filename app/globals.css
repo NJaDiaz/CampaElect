@@ -49,3 +49,16 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+/* Agrega esto en tu archivo globals.css */
+
+/* Contenedor principal del Swiper para darle espacio abajo */
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+/* Mueve la paginación (los puntos) un poco más abajo */
+.swiper-pagination {
+  bottom: 5px !important;
+}

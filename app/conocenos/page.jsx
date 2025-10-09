@@ -4,11 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
+const concejales = [
+  { id: 1, nombre: "Marcelo de la Reta", imagen: "/equipo/concejal1.jpeg",
+    descripcion: "Elegí potrero para que sea mi hogar hace 18 años, abrí mi comercio y reinvertí construyendo mi casa y dos cabañas, me desempeñé por dos años como secretario legislativo del Honorable Concejo Deliberante. Actualmente estoy en la comisión del club Defensores de Potrero hace 8 años, el cual es mi pasión." 
+ },
+  { id: 2, nombre: "Navila Bustos", imagen: "/equipo/concejal2.jpeg",
+    descripcion: "Viví desde mi infancia en Potrero, actualmente soy procuradora y en poco tiempo seré abogada. Mi propuesta central es la creación de un Digesto Municipal. Uno de mis ejes fundamentales es la educación para nuestros jóvenees y niños, y un medioambiente cuidado para que Potrero siga siendo un lugar único y seguro para los locales y turistas. Potrero tiene todo para seguir creciendo, pero necesita orden, visión y compromiso. "
+   },
+  { id: 3, nombre: "Carlos Lucero", imagen: "/equipo/concejal3.jpeg",
+    descripcion: "Tengo 65 años, soy casado, papá de 3 hijos y abuelo de una hermosa nieta. Soy referente del Ente Mixto de Turismo, expositor de Potrero en la FIT(Feria Internacional de Turismo), actualmente soy Presidente de la Asociasión natación Master de la Provincia de San Luis."
+   },
+  { id: 4, nombre: "Emilce Miranda", imagen: "/equipo/concejal_S1.jpeg",
+    descripcion: "Nacida en San Luis, pero Potrero me cautivo, soy mamá de 3 hijos, 8 de corazón y abuela de 4 nietos. A lo largo de estos años he tenido la posibilidad de trabajar y compartir con vecinos y vecinas de nuestro querido Potrero, eso me permitió conocer de cerca la realidad, las necesidades y también sueños de muchas familias. Creo firmemente en que, con compromiso y solidaridad podemos seguir construyendo entre todos una mejor comunidad."
+   },
+  { id: 5, nombre: "Gustavo Amaya", imagen: "/equipo/concejal_S2.jpeg",
+    descripcion: "Tengo 42 años, me crie en esta ciudad, la cual vi crecer. Soy hijo de Laura Amaya, enfermera de Potrero y artesana, hoy el nombre del Paseo de los Artesanos lleva su nombre. Estudié hasta llegar a ser profesor. En el año 2020 formé mi banda 'Signos Foklore'. Creo que la cultura es sumamente importante para la identidad de una ciudad por eso mi aporte será desde lo cultural, a través de la presentación de un proyecto para la creación de una Escuela de Arte."
+   },
+  { id: 6, nombre: "Mariana Cadelago", imagen: "/equipo/concejal_S3.jpeg",
+    descripcion: "Le pregunte a mucha gente que me conoce que me definiera en una sola palabra, y esto fue lo que paso: soy energía, soy luchadora, soy autentica. Soy noble, soy luz, soy creadora y fuerte. Soy puro corazón y muy valiente. Hoy me toca un nuevo desafio, en el cual voy a mejorar día a día para poder seguir emprendiendo, sosteniendo, acompañando, uniendo, guiando y motivando a trabajar en equipo."
+   },
+];
+
+
 export default function Conocenos() {
   return (
     <main className="bg-white pt-40 w-full mx-auto text-black overflow-x-hidden">
       
-      {/* Hero */}
+      
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +58,7 @@ export default function Conocenos() {
         </motion.p>
       </motion.section>
 
-      {/* Trayectoria */}
+      
       <motion.section
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -84,57 +107,103 @@ export default function Conocenos() {
         </motion.ul>
       </motion.section>
 
-      {/* Libro PDF */}
+      
      <motion.section
   initial={{ opacity: 0, y: 60 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.9 }}
   viewport={{ once: true }}
-  className="text-center md:text-right space-y-6 px-6 md:px-24 py-16 container mx-auto max-w-7xl"
+  className="py-16 px-6 md:px-24 container mx-auto max-w-7xl space-y-12"
 >
-  <h2 className="text-3xl font-bold text-orange-600">
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2 }}
+    className="text-3xl font-bold text-orange-600 text-center mb-10"
+  >
     Nuestra Historia en Detalle
-  </h2>
-  <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl md:ml-auto">
-    En este libro de 3 capítulos documentamos en profundidad la evolución
-    de Potrero y los logros alcanzados.
+  </motion.h2>
+
+  <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center max-w-2xl mx-auto mb-10">
+    En estos tomos encontrarás los principales hitos, proyectos y logros
+    que Potrero Activo ha impulsado en Potrero de los Funes. Tres capítulos
+    que reflejan años de trabajo, compromiso y crecimiento colectivo.
   </p>
 
-  {/* Contenedor scrollable con snap */}
-  <div className="flex flex-row justify-start md:justify-end gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar">
+  <div className="flex flex-col gap-16">
     {[
-      { label: "📘 Capítulo 1", url: "https://drive.google.com/file/d/ID_DEL_TOMO_1/view" },
-      { label: "📙 Capítulo 2", url: "https://drive.google.com/file/d/ID_DEL_TOMO_2/view" },
-      { label: "📗 Capítulo 3", url: "https://drive.google.com/file/d/ID_DEL_TOMO_3/view" },
-    ].map((link, index) => (
+      {
+        label: "📘 Capítulo 1",
+        descripcion:
+          "Los inicios: primeras obras, impulso cultural y desarrollo local en Potrero de los Funes.",
+        url: "https://drive.google.com/file/d/1DZPR1SindzjpsVvnJweA6n2PWbV8OZAK/view",
+        preview: "https://drive.google.com/file/d/1DZPR1SindzjpsVvnJweA6n2PWbV8OZAK/preview",
+      },
+      {
+        label: "📙 Capítulo 2",
+        descripcion:
+          "Segunda etapa: fortalecimiento institucional, participación vecinal y nuevos proyectos de infraestructura.",
+        url: "https://drive.google.com/file/d/1oFTb01myqgIv2XC3qVFTE7hfwGUyexba/view",
+        preview: "https://drive.google.com/file/d/1oFTb01myqgIv2XC3qVFTE7hfwGUyexba/preview",
+      },
+      {
+        label: "📗 Capítulo 3",
+        descripcion:
+          "Tercera etepa: una mirada hacia una gestión participativa y sustentable.",
+        url: "https://drive.google.com/file/d/1uoQ_8_yFgmUZFxjmvaFtcMdmDtP8HU5B/view",
+        preview: "https://drive.google.com/file/d/1uoQ_8_yFgmUZFxjmvaFtcMdmDtP8HU5B/preview",
+      },
+    ].map((capitulo, index) => (
       <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
+        key={capitulo.label}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.2 }}
-        className="shrink-0 snap-start"
+        transition={{ duration: 0.8 }}
+        className={`flex flex-col md:flex-row items-center gap-8 ${
+          index % 2 !== 0 ? "md:flex-row-reverse" : ""
+        }`}
       >
-        <Link
-          href={link.url}
-          target="_blank"
-          className="bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow transition block whitespace-nowrap"
+        {/* Vista previa del PDF */}
+        <div className="w-full md:w-1/2 h-72 md:h-80 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            src={capitulo.preview}
+            className="w-full h-full"
+            title={capitulo.label}
+            allow="autoplay"
+          ></iframe>
+        </div>
+
+        {/* Texto y botón */}
+        <div
+          className={`w-full md:w-1/2 space-y-4 ${
+            index % 2 !== 0 ? "md:text-right" : "md:text-left"
+          }`}
         >
-          {link.label}
-        </Link>
+          <h3 className="text-2xl font-bold text-blue-900">{capitulo.label}</h3>
+          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+            {capitulo.descripcion}
+          </p>
+          <Link
+            href={capitulo.url}
+            target="_blank"
+            className="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow transition"
+          >
+            Ver documento completo
+          </Link>
+        </div>
       </motion.div>
     ))}
   </div>
 </motion.section>
 
 
-
-      {/* Candidato */}
+      
       <motion.section
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
-        className="bg-gray-50 py-16 px-6 md:px-36 rounded-2xl shadow-md flex flex-col md:flex-row items-center gap-10 container mx-auto"
+        className="py-16 px-6 md:px-36 flex flex-col md:flex-row items-center gap-10 container mx-auto"
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -144,7 +213,7 @@ export default function Conocenos() {
         >
           <Image
             src="/images/Perfil.webp"
-            alt="Candidato"
+            alt="Candidato a Intendente"
             width={320}
             height={320}
             className="rounded-full object-cover shadow-xl border-4 border-orange-600"
@@ -168,13 +237,76 @@ export default function Conocenos() {
         </motion.div>
       </motion.section>
 
-      {/* CTA Final */}
+      
+      <motion.section
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+        className="bg-orange-50 py-20 px-6 md:px-16 rounded-2xl shadow-md container mx-auto"
+      >
+        <h2 className="text-3xl font-bold text-center text-orange-600 mb-16">
+          Nuestro Equipo de Concejales
+        </h2>
+        <div className="space-y-20">
+          {concejales.map((concejal, index) => (
+            <motion.div
+              key={concejal.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className={`flex flex-col md:flex-row items-center gap-10 ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative shrink-0"
+              >
+                <Image
+                  src={concejal.imagen}
+                  alt={`Candidato a Concejal: ${concejal.nombre}`}
+                  width={240}
+                  height={240}
+                  className="rounded-full object-cover shadow-xl border-4 border-blue-900"
+                />
+              </motion.div>
+
+              
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  x: index % 2 !== 0 ? -40 : 40,
+                }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.9 }}
+                className={`space-y-3 max-w-lg ${
+                  index % 2 !== 0 ? "md:text-right" : "md:text-left"
+                }`}
+              >
+                <h3 className="text-2xl font-bold text-blue-900">
+                  {concejal.nombre}
+                </h3>
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                   {concejal.descripcion}
+                </p>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      
       <motion.section
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-6 md:px-28 text-center space-y-6 md:rounded-2xl shadow-lg container mx-auto"
+        className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-6 md:px-28 text-center space-y-6 mt-16 md:rounded-2xl shadow-lg container mx-auto"
       >
         <h3 className="text-2xl md:text-3xl font-bold">
           Seguimos trabajando por Potrero
@@ -187,4 +319,3 @@ export default function Conocenos() {
     </main>
   );
 }
-

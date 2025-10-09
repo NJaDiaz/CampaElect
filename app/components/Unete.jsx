@@ -11,18 +11,16 @@ export default function Unete() {
     const form = e.target;
     const formData = new FormData(form);
 
-    // Enviar el formulario a FormSubmit
-    await fetch("https://formsubmit.co/tu-email@example.com", {
+    
+    await fetch("https://formsubmit.co/jeronimoorlandoestudiosur@gmail.com", {
       method: "POST",
       body: formData,
     });
 
     setShowMessage(true);
 
-    // Resetear formulario
     form.reset();
 
-    // Redirigir después de 3 segundos
     setTimeout(() => {
       window.location.href = "/unete";
     }, 3000);
@@ -49,8 +47,7 @@ export default function Unete() {
           </div>
 
           <div className="bg-orange-300 p-6 rounded-xl shadow-lg">
-            <form action="https://formsubmit.co/TU_CORREO@ejemplo.com" method="POST" className="space-y-4">
-            {/* Anti-spam */}
+            <form action="https://formsubmit.co/jeronimoorlandoestudiosur@gmail.com" method="POST" className="space-y-4">
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://tusitio.com/gracias" />
 
@@ -136,7 +133,7 @@ export default function Unete() {
 </div>
 
 
-          {/* Mapa */}
+          
           <div className="mt-6">
             <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
               <iframe
@@ -149,6 +146,22 @@ export default function Unete() {
           </div>
         </div>
       </div>
+      <div className="pt-16">
+  <h3 className="text-lg text-center font-semibold text-white mb-2">
+    Mirá cómo llegar en este video
+  </h3>
+  <div className="flex content-center justify-center">
+    <div className="w-auto rounded-lg overflow-hidden max-h-[500px]">
+      <video
+        className="h-full w-full"
+        controls
+        src="/videos/Sede.mp4"
+      >
+        Tu navegador no soporta el tag de video.
+      </video>
+    </div>
+  </div>
+</div>
     </section>
   );
 };

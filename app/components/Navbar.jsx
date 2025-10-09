@@ -16,15 +16,17 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Conócenos", href: "/conocenos" },
-    { label: "Propuestas", href: "/#propuesta" },
+    { label: "Agenda", href: "/#Agenda" },
     { label: "Noticias", href: "/#informate" },
     { label: "Contacto", href: "/unete" },
+    { label: "Galeria", href: "/galeria" },
+
   ];
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
-        {/* Logo */}
+        
         <div className="flex items-center">
           <Link href="/">
             <Image
@@ -37,7 +39,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Menu */}
+        
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, idx) => (
             <Link
@@ -50,7 +52,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        
         {mounted && (
           <button
             onClick={toggleMenu}
@@ -74,7 +76,7 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Mobile Menu */}
+      
       {mounted && (
         <div
           className={`md:hidden bg-white shadow-md transition-all duration-300 overflow-hidden ${

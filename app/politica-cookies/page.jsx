@@ -1,5 +1,11 @@
 "use client";
 
+export const metadata = {
+  title: 'Política de Cookies - Potrero Activo | Potrero de los Funes',
+  description: 'Conoce cómo Potrero Activo utiliza cookies para mejorar tu experiencia en nuestro sitio web y garantizar un funcionamiento óptimo en Potrero de los Funes.',
+};
+
+
 export default function PoliticaCookies() {
   return (
         <main className="pt-24 bg-[#ff6e1c] w-full mx-auto">

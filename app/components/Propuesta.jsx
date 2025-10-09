@@ -1,10 +1,19 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const PropuestaSection = () => {
   return (
-    <section id="propuesta" className="bg-white py-16 px-6">
+    <motion.section 
+      id="propuesta" 
+      className="bg-white py-16 px-6"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: false }}
+    >
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-
         <div className="w-full md:w-1/2 lg:w-1/2 text-center lg:text-left">
           <h1 className="md:text-4xl text-xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto lg:mx-0">
             Tenemos prioridad con el vecino para llevar nuevamente Potrero de los Funes a lo más alto
@@ -36,7 +45,7 @@ const PropuestaSection = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
