@@ -150,7 +150,8 @@ export default function Informate() {
       
       {modalOpen && modalData && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg w-full max-w-md md:max-w-3xl p-6 shadow-xl relative flex flex-col md:flex-row gap-6">
+          <div className="bg-white rounded-lg w-full max-w-md md:max-w-3xl p-6 shadow-xl relative flex flex-col md:flex-row gap-6 max-h-[90vh]">
+            
             <div className="flex-shrink-0 md:w-1/2">
               <Image
                 src={modalData.imagen}
@@ -160,21 +161,26 @@ export default function Informate() {
                 className="rounded-md w-full h-auto object-cover"
               />
             </div>
-            <div className="flex-1 flex flex-col space-y-4">
-              <h3 className="text-2xl font-bold text-blue-900">{modalData.titulo}</h3>
-              <div className="space-y-4 overflow-y-auto max-h-[50vh] pr-2 text-gray-700">
+
+            <div className="flex-1 flex flex-col space-y-4 md:min-h-0">
+              <h3 className="text-2xl font-bold text-blue-900 flex-shrink-0">{modalData.titulo}</h3>
+              
+           
+              <div className="flex-1 space-y-4 overflow-y-auto min-h-0 pr-2 text-gray-700">
                 {modalData.detalle.map((parrafo, index) => (
                   <p key={index}>{parrafo}</p>
                 ))}
               </div>
-              <div className="flex justify-between items-center mt-auto pt-4">
+
+              <div className="flex justify-between items-center mt-auto pt-4 flex-shrink-0">
                 <p className="text-sm text-gray-500">{modalData.fecha}</p>
                 <BotonCompartir title={modalData.titulo} slug={modalData.slug} />
               </div>
             </div>
+
             <button
               onClick={() => setModalOpen(false)}
-              className="absolute top-2 right-4 text-orange-500 text-4xl hover:text-red-600"
+              className="absolute top-2 right-4 text-orange-500 text-4xl hover:text-red-600 z-10"
             >
               ×
             </button>

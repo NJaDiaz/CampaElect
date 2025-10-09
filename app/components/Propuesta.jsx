@@ -29,7 +29,7 @@ const PropuestaSection = () => {
 
           <div className="mt-8">
             <a
-              href="/propuestas"
+              href="/Propuestas"
               className="bg-[#FF6B00] text-white font-medium py-3 px-6 rounded-md hover:bg-[#FFA500] transition-colors duration-300"
             >
               Nuestras Propuestas

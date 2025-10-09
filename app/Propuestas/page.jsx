@@ -36,7 +36,7 @@ export default function Propuestas() {
         </motion.p>
       </motion.section>
 
-      {/* Visor de PDF con Google Drive */}
+      
       <motion.section
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function Propuestas() {
         viewport={{ once: true }}
         className="container mx-auto px-6"
       >
-        {/* Contenedor responsivo para el iframe */}
+        
         <div className="relative w-full max-w-4xl mx-auto aspect-video md:aspect-[4/3] rounded-lg shadow-lg overflow-hidden">
           <iframe
             src={googleDriveEmbedUrl}
