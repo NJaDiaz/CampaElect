@@ -5,6 +5,8 @@ import Propuesta from './components/Propuesta.jsx';
 import Somos from './components/Conocenos.jsx';
 import Facebook from './components/Facebook.jsx';
 import Informate from "./components/Informate.jsx";
+import AvisoPadron from "./components/AvisoPadron";
+
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
       <Somos />
       <Informate />
       <Facebook />
+      <AvisoPadron />
     </main>
   );
 }
