@@ -34,7 +34,7 @@ const ConocenosSection = () => {
         <div className="my-16">
           <div className="text-center">
             <img
-              src="/images/PerfilDaniel.webp"
+              src="/images/PerfilDani.webp"
               alt="Daniel Orlando"
               className="w-28 h-28 mx-auto rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300"
             />

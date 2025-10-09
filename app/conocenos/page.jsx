@@ -163,7 +163,7 @@ export default function Conocenos() {
           index % 2 !== 0 ? "md:flex-row-reverse" : ""
         }`}
       >
-        {/* Vista previa del PDF */}
+        
         <div className="w-full md:w-1/2 h-72 md:h-80 rounded-xl overflow-hidden shadow-lg border border-gray-200">
           <iframe
             src={capitulo.preview}
@@ -173,7 +173,7 @@ export default function Conocenos() {
           ></iframe>
         </div>
 
-        {/* Texto y botón */}
+        
         <div
           className={`w-full md:w-1/2 space-y-4 ${
             index % 2 !== 0 ? "md:text-right" : "md:text-left"
@@ -212,7 +212,7 @@ export default function Conocenos() {
           className="relative"
         >
           <Image
-            src="/images/Perfil.webp"
+            src="/images/PerfilDani.webp"
             alt="Candidato a Intendente"
             width={320}
             height={320}
