@@ -6,22 +6,22 @@ import { motion } from "framer-motion";
 
 
 const concejales = [
-  { id: 1, nombre: "Marcelo de la Reta", imagen: "/equipo/concejal1.jpeg",
+  { id: 1, nombre: "Marcelo de la Reta", imagen: "/equipo/Concejal.jpeg",
     descripcion: "Elegí potrero para que sea mi hogar hace 18 años, abrí mi comercio y reinvertí construyendo mi casa y dos cabañas, me desempeñé por dos años como secretario legislativo del Honorable Concejo Deliberante. Actualmente estoy en la comisión del club Defensores de Potrero hace 8 años, el cual es mi pasión." 
  },
-  { id: 2, nombre: "Navila Bustos", imagen: "/equipo/concejal2.jpeg",
+  { id: 2, nombre: "Navila Bustos", imagen: "/equipo/Concejal2.jpeg",
     descripcion: "Viví desde mi infancia en Potrero, actualmente soy procuradora y en poco tiempo seré abogada. Mi propuesta central es la creación de un Digesto Municipal. Uno de mis ejes fundamentales es la educación para nuestros jóvenees y niños, y un medioambiente cuidado para que Potrero siga siendo un lugar único y seguro para los locales y turistas. Potrero tiene todo para seguir creciendo, pero necesita orden, visión y compromiso. "
    },
-  { id: 3, nombre: "Carlos Lucero", imagen: "/equipo/concejal3.jpeg",
+  { id: 3, nombre: "Carlos Lucero", imagen: "/equipo/Concejal3.jpeg",
     descripcion: "Tengo 65 años, soy casado, papá de 3 hijos y abuelo de una hermosa nieta. Soy referente del Ente Mixto de Turismo, expositor de Potrero en la FIT(Feria Internacional de Turismo), actualmente soy Presidente de la Asociasión natación Master de la Provincia de San Luis."
    },
-  { id: 4, nombre: "Emilce Miranda", imagen: "/equipo/concejal_S1.jpeg",
+  { id: 4, nombre: "Emilce Miranda", imagen: "/equipo/Concejal_S1.jpeg",
     descripcion: "Nacida en San Luis, pero Potrero me cautivo, soy mamá de 3 hijos, 8 de corazón y abuela de 4 nietos. A lo largo de estos años he tenido la posibilidad de trabajar y compartir con vecinos y vecinas de nuestro querido Potrero, eso me permitió conocer de cerca la realidad, las necesidades y también sueños de muchas familias. Creo firmemente en que, con compromiso y solidaridad podemos seguir construyendo entre todos una mejor comunidad."
    },
-  { id: 5, nombre: "Gustavo Amaya", imagen: "/equipo/concejal_S2.jpeg",
+  { id: 5, nombre: "Gustavo Amaya", imagen: "/equipo/Concejal_S2.jpeg",
     descripcion: "Tengo 42 años, me crie en esta ciudad, la cual vi crecer. Soy hijo de Laura Amaya, enfermera de Potrero y artesana, hoy el nombre del Paseo de los Artesanos lleva su nombre. Estudié hasta llegar a ser profesor. En el año 2020 formé mi banda 'Signos Foklore'. Creo que la cultura es sumamente importante para la identidad de una ciudad por eso mi aporte será desde lo cultural, a través de la presentación de un proyecto para la creación de una Escuela de Arte."
    },
-  { id: 6, nombre: "Mariana Cadelago", imagen: "/equipo/concejal_S3.jpeg",
+  { id: 6, nombre: "Mariana Cadelago", imagen: "/equipo/Concejal_S3.jpeg",
     descripcion: "Le pregunte a mucha gente que me conoce que me definiera en una sola palabra, y esto fue lo que paso: soy energía, soy luchadora, soy autentica. Soy noble, soy luz, soy creadora y fuerte. Soy puro corazón y muy valiente. Hoy me toca un nuevo desafio, en el cual voy a mejorar día a día para poder seguir emprendiendo, sosteniendo, acompañando, uniendo, guiando y motivando a trabajar en equipo."
    },
 ];
