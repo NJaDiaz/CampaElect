@@ -3,11 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const metadata = {
-  title: 'Plan de Trabajo y Propuestas',
-  description: 'Descubrí el plan de trabajo detallado de Potrero Activo para el municipio de Potrero de los Funes. Propuestas en turismo, obras, educación y más.',
-};
-
 export default function Propuestas() {
   const googleDriveEmbedUrl = "https://drive.google.com/file/d/1WBrXq8mzsFsQVZbFu64kqF9XPIoyrffe/preview";
   
