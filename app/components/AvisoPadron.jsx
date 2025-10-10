@@ -41,7 +41,7 @@ export default function AvisoPadron() {
             </p>
 
             <Link
-              href="https://www.periodicojudicial.gov.ar/padron-de-electores-ya-se-puede-consultar-en-el-sitio-web-de-la-justicia-electoral-provincial/"
+              href="https://padrondefinitivo.justiciasanluis.gov.ar/ords/r/persoa/potrero/inicio"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center bg-orange-600 text-white font-bold py-2 px-3 text-sm sm:text-base rounded-lg hover:bg-orange-700 transition-transform transform hover:scale-105"
