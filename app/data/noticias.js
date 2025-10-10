@@ -34,11 +34,11 @@ export const noticias = {
     ],
   },
   "nota-consejo-deliberante": {
-    titulo: "Nota al consejo deliberante",
+    titulo: "Nota al concejo deliberante",
     fecha: "05 Agosto 2025",
     imagenes: ["/informate/nota.webp"],
     contenido: [
-      "Daniel Orlando presentó un pedido de informe al Consejo Deliberante en busca de claridad y respuesta para el pueblo, ya que se acerca la fecha de elecciones y no hay certeza alguna de que esto suceda."
+      "Daniel Orlando presentó un pedido de informe al Concejo Deliberante en busca de claridad y respuesta para el pueblo, ya que se acerca la fecha de elecciones y no hay certeza alguna de que esto suceda."
     ],
   },
 };

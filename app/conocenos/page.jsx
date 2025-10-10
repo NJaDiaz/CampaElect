@@ -1,9 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 
 const concejales = [
   { id: 1, nombre: "Marcelo de la Reta", imagen: "/equipo/Concejal.jpeg",
@@ -26,11 +26,31 @@ const concejales = [
    },
 ];
 
-
 export default function Conocenos() {
+  useEffect(() => {
+  const handleScrollToHash = () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
+  const timer = setTimeout(handleScrollToHash, 1000);
+
+  window.addEventListener("hashchange", handleScrollToHash);
+
+  return () => {
+    clearTimeout(timer);
+    window.removeEventListener("hashchange", handleScrollToHash);
+  };
+}, []);
+
   return (
     <main className="bg-white pt-40 w-full mx-auto text-black overflow-x-hidden">
-      
       
       <motion.section
         initial={{ opacity: 0, y: 50 }}
@@ -220,6 +240,7 @@ export default function Conocenos() {
           />
         </motion.div>
         <motion.div
+          id="intendente"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9 }}
@@ -238,7 +259,7 @@ export default function Conocenos() {
       </motion.section>
 
       
-      <motion.section
+     <motion.section
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
@@ -252,6 +273,7 @@ export default function Conocenos() {
           {concejales.map((concejal, index) => (
             <motion.div
               key={concejal.id}
+              id={`concejal-${concejal.id}`} 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -260,7 +282,6 @@ export default function Conocenos() {
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
-              
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -276,7 +297,6 @@ export default function Conocenos() {
                 />
               </motion.div>
 
-              
               <motion.div
                 initial={{
                   opacity: 0,
@@ -292,7 +312,7 @@ export default function Conocenos() {
                   {concejal.nombre}
                 </h3>
                 <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                   {concejal.descripcion}
+                  {concejal.descripcion}
                 </p>
               </motion.div>
             </motion.div>
@@ -300,7 +320,6 @@ export default function Conocenos() {
         </div>
       </motion.section>
 
-      
       <motion.section
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}

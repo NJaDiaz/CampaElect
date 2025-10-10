@@ -17,10 +17,10 @@ const FacebookVideo = () => {
   const eventos = [
     { fecha: "2025-08-05", titulo: "Nota elevada", descripcion: "Presentación de pedido de informe al Honorable Consejo Deliberante" },
     { fecha: "2025-09-23", titulo: "Presentación candidatos a concejal", descripcion: "Presentación de todos los candidatos a concejal de nuestra lista" },
-    { fecha: "2025-10-10", titulo: "Presentación campaña y plan de trabajo", descripcion: "Presentación de la campaña Potrero Activo y plan de trabajo para el año 2025-2029" },
-    { fecha: "2025-10-16", titulo: "Reunión abierta", descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
-    { fecha: "2025-10-23", titulo: "Reunión abierta", descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
-    { fecha: "2025-10-30", titulo: "Reunión abierta", descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
+    { fecha: "2025-10-10", titulo: "Presentación campaña y plan de trabajo", lugar:"Lugar: Sede Potrero Activo" , hora:"Hora: 20:30hs" , descripcion: "Presentación de la campaña Potrero Activo y plan de trabajo para el año 2025-2029" },
+    { fecha: "2025-10-16", titulo: "Reunión abierta", lugar:"Lugar: Sede Potrero Activo" , hora:"Hora: 20:30hs" , descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
+    { fecha: "2025-10-23", titulo: "Reunión abierta", lugar:"Lugar: Sede Potrero Activo" , hora:"Hora: 20:30hs", descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
+    { fecha: "2025-10-30", titulo: "Reunión abierta", lugar:"Lugar: Sede Potrero Activo" , hora:"Hora: 20:30hs", descripcion: "Invitamos a todos los vecinos a participar de una reunión abierta para compartir ideas, inquietudes y propuestas sobre el futuro de Potrero de los Funes." },
 
   ];
 
@@ -111,9 +111,11 @@ const FacebookVideo = () => {
             <ul className="space-y-2">
               {getEventsByDate(fechaSeleccionada).length > 0 ? (
                 getEventsByDate(fechaSeleccionada).map((evento, index) => (
-                  <li key={index} className="p-3 bg-[#FFF7F0] rounded-lg shadow">
-                    <h4 className="font-bold text-[#FF6B00]">{evento.titulo}</h4>
-                    <p className="text-sm text-gray-700">{evento.descripcion}</p>
+                  <li key={index} className="p-3 bg-[#FFF7F0] text-center rounded-lg shadow">
+                    <h4 className="font-bold text-[rgb(255,107,0)]">{evento.titulo}</h4>
+                    <h4 className="font-semibold text-sm text-[#000000]">{evento.lugar}</h4>
+                    <h4 className="font-semibold text-sm text-[#000000]">{evento.hora}</h4>
+                    <p className="text-md text-gray-700">{evento.descripcion}</p>
                   </li>
                 ))
               ) : (
