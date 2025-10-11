@@ -21,7 +21,13 @@ export const metadata = {
   },
   description: 'Conocé el equipo, las propuestas y el plan de trabajo de Potrero Activo, la lista encabezada por Daniel Orlando para el futuro de Potrero de los Funes, San Luis.',
   keywords: ['Potrero Activo', 'Daniel Orlando', 'Potrero de los Funes', 'elecciones Potrero', 'San Luis'],
+  
+  alternates: {
+    canonical: 'https://potreroactivo.online/',
+  },
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
