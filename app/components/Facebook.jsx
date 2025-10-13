@@ -25,33 +25,38 @@ const FacebookVideo = () => {
   ];
 
   const videos = [
-    {
+{
       id: 1,
+      type: 'facebook',
+      src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1853371052723113%2F&show_text=false&width=267&t=0'
+    },
+    {
+      id: 2,
       type: 'facebook',
       src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1133265048263231%2F&show_text=false&width=267&t=0'
     },
      {
-      id: 2,
+      id: 3,
       type: 'facebook',
       src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fdaniel.orlando.35175%2Fvideos%2F670634729414306%2F&show_text=false&width=267&t=0'
     },
     {
-      id: 3,
+      id: 4,
       type: 'facebook',
       src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fdaniel.orlando.35175%2Fvideos%2F1110718654373917%2F&show_text=false&width=267&t=0'
     },
     {
-      id: 4,
+      id: 5,
       type: 'facebook',
       src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fdaniel.orlando.35175%2Fvideos%2F1450854696189001%2F&show_text=false&width=267&t=0'
     },
     {
-      id: 5,
+      id: 6,
       type: 'facebook',
       src: 'https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fdaniel.orlando.35175%2Fvideos%2F1095568592664006%2F&show_text=false&width=267&t=0'
     },
     {
-      id: 6,
+      id: 7,
       type: 'local',
       src: '/videos/Sede.mp4' 
     }

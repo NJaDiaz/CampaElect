@@ -49,7 +49,7 @@ export default function Unete() {
           <div className="bg-orange-300 p-6 rounded-xl shadow-lg">
             <form action="https://formsubmit.co/jeronimoorlandoestudiosur@gmail.com" method="POST" className="space-y-4">
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://tusitio.com/gracias" />
+            <input type="hidden" name="_next" value="https://potreroactivo.online/gracias" />
 
             <h2 className="font-bold text-black text-xl">Sumate llenando este formulario</h2>
             

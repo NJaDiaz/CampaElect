@@ -84,7 +84,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               <a href="/unete" className="bg-[#FF6B00] hover:bg-[#FFA500] text-white py-2 px-6 rounded-md text-lg font-semibold transition duration-300">
-                Únete a la Campaña
+                Sumate a la Campaña
               </a>
               <a href="/galeria" className="bg-transparent border-2 border-white hover:bg-white hover:text-[#FF6B00] py-2 px-6 rounded-md text-lg font-semibold transition duration-300">
                 Ver Galería
