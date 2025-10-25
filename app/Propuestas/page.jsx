@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Propuestas() {
-  const googleDriveEmbedUrl = "https://drive.google.com/file/d/1WBrXq8mzsFsQVZbFu64kqF9XPIoyrffe/preview";
+  const googleDriveEmbedUrl = "https://drive.google.com/file/d/1ZbV4-a2VJbaCq8FLwiU0yRoqu_pWypRM/preview";
   
   const pdfDownloadPath = "/docs/plan-de-trabajo.pdf"; 
 
@@ -75,13 +75,25 @@ export default function Propuestas() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-blue-900 opacity-50">
           <div className="bg-orange-50 p-6 rounded-xl shadow">
-            <h3 className="font-bold text-xl">Turismo y Desarrollo</h3>
+            <h3 className="font-bold text-xl">Administración y Modernización Municipal</h3>
           </div>
           <div className="bg-orange-50 p-6 rounded-xl shadow">
-            <h3 className="font-bold text-xl">Obras y Servicios</h3>
+            <h3 className="font-bold text-xl">Turismo y Comercio</h3>
+          </div>
+          <div className="bg-orange-50 p-6 rounded-xl shadow">
+            <h3 className="font-bold text-xl">Obras Públicas y Desarrollo Urbanístico</h3>
           </div>
           <div className="bg-orange-50 p-6 rounded-xl shadow">
             <h3 className="font-bold text-xl">Educación y Cultura</h3>
+          </div>
+          <div className="bg-orange-50 p-6 rounded-xl shadow">
+            <h3 className="font-bold text-xl">Deporte y Juventud</h3>
+          </div>
+          <div className="bg-orange-50 p-6 rounded-xl shadow">
+            <h3 className="font-bold text-xl">Medio Ambiente</h3>
+          </div>
+          <div className="bg-orange-50 p-6 rounded-xl shadow">
+            <h3 className="font-bold text-xl">Seguridad y Orden Vial</h3>
           </div>
         </div>
       </section>
